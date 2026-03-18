@@ -1,4 +1,12 @@
-"scripts": {
-  "build": "echo Build OK",
-  "test": "exit 1"
+{
+  "name": "integracao",
+  "version": "1.0.0",
+  "description": "Projeto para atividade GitHub Actions",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo Build OK",
+    "test": "exit 1"
+  },
+  "author": "Beatriz",
+  "license": "ISC"
 }
