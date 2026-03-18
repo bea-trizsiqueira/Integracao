@@ -1,0 +1,4 @@
+"scripts": {
+  "build": "echo Build OK",
+  "test": "exit 1"
+}
