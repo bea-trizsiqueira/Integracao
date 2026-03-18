@@ -25,3 +25,16 @@ jobs:
 
       - name: Test (vai falhar)
         run: npm test
+
+      - name: Enviar email em caso de erro
+        if: failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USER }}
+          password: ${{ secrets.EMAIL_PASS }}
+          subject: "Erro no pipeline GitHub Actions"
+          body: "O pipeline falhou! Verifique o repositório."
+          to: ${{ secrets.EMAIL_USER }}
+          from: ${{ secrets.EMAIL_USER }}
