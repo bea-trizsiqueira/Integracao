@@ -1,6 +1,6 @@
 {
   "name": "integracao",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Projeto para atividade GitHub Actions",
   "main": "index.js",
   "scripts": {
@@ -8,5 +8,8 @@
     "test": "exit 1"
   },
   "author": "Beatriz",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "standard-version": "^9.5.0"
+  }
 }
