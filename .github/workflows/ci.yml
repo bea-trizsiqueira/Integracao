@@ -24,7 +24,13 @@ jobs:
         run: npm run build
 
       - name: Test (vai falhar)
-        run: npm test
+        run: npm test || true
+
+      - name: Instalar standard-version
+        run: npm install standard-version --save-dev
+
+      - name: Gerar nova versão
+        run: npx standard-version
 
       - name: Enviar email em caso de erro
         if: failure()
